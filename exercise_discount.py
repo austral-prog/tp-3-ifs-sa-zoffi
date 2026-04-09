@@ -24,4 +24,23 @@ def discount():
         Monto de descuento: 240.0
         Total final: 960.0
     """
-    pass
+    precio_unitario=float(input())
+    cantidad_unidades=int(input())
+    subtotal=precio_unitario*cantidad_unidades
+    print(f"Subtotal: {subtotal}")
+    if cantidad_unidades>=10:
+        total_final=subtotal-subtotal*0.20
+        descuento="20%"
+        monto_descuento=subtotal*0.20
+    elif cantidad_unidades>=5:
+        total_final=subtotal-subtotal*0.10
+        descuento="10%"
+        monto_descuento=subtotal*0.10
+    elif cantidad_unidades<5:
+        total_final=subtotal
+        descuento="0%"
+        monto_descuento=float(0)
+    print(f"Descuento aplicado: {descuento}")
+    print(f"Monto de descuento: {monto_descuento}")
+    print(f"Total final: {total_final}")
+#discount()
